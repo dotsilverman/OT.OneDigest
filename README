@@ -52,6 +52,8 @@ Location of containers on board. Below is a description of the containers and th
 
 "standard": 4-well e-gel go reader
 
+Notes: hot glue everything down to gantry bottom
+
 GFPdigest_Part1
 ===============
 Transfer 34 uL from trough to PCR tube. Doing four transfers currently (3x10 uL + 1x4 uL) because I can only use a 10 uL pipette. Will be consolidated to one 34 uL transfer when can have dual pipette control and use the 200 uL pipette.
@@ -67,6 +69,9 @@ PCR
 60 min, 37C (program = )
 20 min, 65C
 hold at 16C
+
+Notes: I am currently using the OpenPCR (http://openpcr.org/). Due to severe memory limitations of the Arduino in the OpenPCR there are limits on the program size running on it. 
+Instead use OpenPyCR in the terminal (https://github.com/cathalgarvey/OpenPyCR)
 
 GFPdigest_Part2
 ===============
