@@ -1,0 +1,102 @@
+README: GFP plasmid digest starting on 6/15/15
+Included in this repo:
+-Readme
+-photo of 
+
+Need 
+My current containers.json
+
+** Ingredient details **
+=========================================================
+=========================================================
+GFP DNA = DNA 2.0 T5-Comet GFP, product #: FPB- 26-441
+Buffer = NEB cutsmart buffer, product #: B7204S
+RE = NEB BSA I, product #: R0535S
+Gel dye = Invitrogen E-Gel Sample Loading Buffer, product #: 10482-055V
+Gel ladder = Invitrogen E-Gel 1 Kb Plus DNA Ladder, product #: 10488-090
+
+** Container details **
+==========================================================
+==========================================================
+Location of containers on board. Below is a description of the containers and their preloaded wells.
+
+| A3	    | B3        | C3        | D3        | E3		 
+| Empty     | Empty     | Empty     | OpenPCR   | OpenPCR
+————————————-—————————————————————————————————————————————   
+| A2        | B2        | C2        | D2        | E2 
+| p10-rackb | tubes     | mix_plate | Empty     | Empty
+————————————-————————————————————————————————————————————— 
+| A1        | B1        | C1        | D1        | E1 
+| p10-racka | trash     | trough    | gel go    | Empty
+
+"trough": Water trough
+	A1: DI water
+
+"tubes": 4x6 0.5 mL tube rack
+	A1: GFP dna plasmid. 10 uL in 0.5 mL centrifuge tube. 
+	B1: NEBuffer. 10 uL in 0.5 mL centrifgue tube. Take 5 mL. Consolidate both R.E. and Buffer.Transfer the 6 uL together to PCR tube.
+	C1: BsaI restriction enzyme. 10 uL in 0.5 mL centrifuge tube. Take 1 uL.
+	D1: E-gel sample loading buffer. 10 uL in 0.5 mL centrifuge tube. Take 3 uL/well (three wells, so 9 uL used total)
+	A2: 1 Kb Plus DNA Ladder. 10 uL in 0.5 mL centrifuge tube. Take 3 uL.
+
+"p10-racka": 10 uL pipette tips
+
+"p10-rackb": 200 uL pipette tips 
+
+"mix_plate": 96-well plate
+
+"pcr": 4x4 well openPCR machine
+	A1: empty 0.2 mL PCR tube 
+
+"trash": point 
+
+"standard": 4-well e-gel go reader
+
+GFPdigest_Part1
+===============
+Transfer 34 uL from trough to PCR tube. Doing four transfers currently (3x10 uL + 1x4 uL) because I can only use a 10 uL pipette. Will be consolidated to one 34 uL transfer when can have dual pipette control and use the 200 uL pipette.
+
+Transfer 10 uL from "tubes" A1 to "pcr" A1
+
+Consolidate 5 mL from "tubes" B1 and 1 mL from "tubes" C1 to "pcr" A1
+
+Mix "pcr" A1 five times
+
+PCR
+====
+60 min, 37C (program = )
+20 min, 65C
+hold at 16C
+
+GFPdigest_Part2
+===============
+PCR ends. Currently 16 uL solution total in PCR tube (10 uL DNA + 5 uL Buffer + 5uL Restriction enzyme). 
+
+Consolidate 7 uL of water from "trough" and 3 uL of gel ladder from "tubes" A2 to "mix_plate" A1
+
+Distribute 5 uL in "pcr" A1 to "mix_plate" B1, C1, D1 (so move 30 uL total from "pcr" A1 to "mix_plate". 
+
+Distribute 2 uL of water from "trough" A1 to "mix_plate" B1, C1, D1 (so move 6 uL total from "trough to "mix_plate")
+
+Distribute 3 uL (of gel dye) from "tubes" D1 to "mix_plate" B1, C1, D1 (so move 9 uL total from "tubes" D1 to "mix_plate")
+
+Pipette  uL of DI H20 into A1 well of 96-well plate. 
+
+Mix A1, B1, C1, and D1 five times each.  
+
+Transfer 10 uL in "mix_plate" A1 to "standard" A1 
+
+Transfer 10 uL in "mix_plate" B1 to "standard" B1
+
+Transfer 10 uL in "mix_plate" C1 to "standard" C1
+
+Transfer 10 uL in "mix_plate" D1 to "standard" D1   
+
+Run gel
+
+
+
+
+
+
+

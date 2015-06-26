@@ -1,0 +1,285 @@
+{
+    "deck": {
+        "p10-racka": {
+            "labware": "tiprack-10ul"
+        },
+        "p10-rackb": {
+            "labware": "tiprack-10ul"
+        },
+        "trough": {
+            "labware": "trough-12row"
+        },
+        "standard": {
+            "labware": "e-gelgol"
+        },
+        "tubes": {
+            "labware": "tube-rack-2ml"
+        },
+        "pcr": {
+            "labware": "openpcr"
+        },
+        "trash": {
+            "labware": "point"
+        }
+    },
+    "head": {
+        "p10a": {
+            "tool": "pipette",
+            "tip-racks": [
+                {
+                    "container": "p10-racka"
+                }
+            ],
+            "trash-container": {
+                "container": "trash"
+            },
+            "multi-channel": false,
+            "axis": "a",
+            "volume": 10,
+            "down-plunger-speed": 300,
+            "up-plunger-speed": 300,
+            "tip-plunge": 7,
+            "extra-pull-volume": 0,
+            "extra-pull-delay": 25,
+            "distribute-percentage": 0.1,
+            "points": [
+                {
+                    "f1": 1,
+                    "f2": 3
+                },
+                {
+                    "f1": 3,
+                    "f2": 5
+                },
+                {
+                    "f1": 5,
+                    "f2": 7
+                },
+                {
+                    "f1": 10,
+                    "f2": 10
+                }
+            ]
+        },
+        "p10b": {
+            "tool": "pipette",
+            "tip-racks": [
+                {
+                    "container": "p10-rackb"
+                }
+            ],
+            "trash-container": {
+                "container": "trash"
+            },
+            "multi-channel": false,
+            "axis": "b",
+            "volume": 10,
+            "down-plunger-speed": 300,
+            "up-plunger-speed": 300,
+            "tip-plunge": 7,
+            "extra-pull-volume": 20,
+            "extra-pull-delay": 25,
+            "distribute-percentage": 0.1,
+            "points": [
+                {
+                    "f1": 1,
+                    "f2": 2
+                },
+                {
+                    "f1": 3,
+                    "f2": 5
+                },
+                {
+                    "f1": 7,
+                    "f2": 10
+                },
+                {
+                    "f1": 10,
+                    "f2": 10
+                }
+            ]
+        }
+    },
+    "ingredients": {
+      "DNA": [
+        {
+          "container": "tubes",
+          "location": "A1",
+          "volume": 10
+        }
+      ],
+      "Buff": [
+        {
+          "container": "tubes",
+          "location": "B1",
+          "volume": 10
+        }
+      ],
+      "RE": [
+        {
+          "container": "tubes",
+          "location": "C1",
+          "volume": 10
+        }
+      ],
+      "Gel_dye": [
+        {
+          "container": "tubes",
+          "location": "D1",
+          "volume": 10
+        }
+      ],
+      "Gel_ladder": [
+        {
+          "container": "tubes",
+          "location": "A2",
+          "volume": 10
+        }
+      ]
+      },
+
+    "instructions": [
+        {
+            "tool": "p10a",
+            "groups": [
+
+                {
+                  "transfer": [
+                    {
+                      "from": {
+                        "container": "trough",
+                        "location": "A1",
+                        "tip-offset": 0,
+                        "delay": 400,
+                        "tip-touch": false
+                      },
+                      "to": {
+                        "container": "pcr",
+                        "location": "A1",
+                        "touch-tip": true
+                      },
+                      "volume": 10,
+                      "blowout": true
+                    },
+                    {
+                      "from": {
+                        "container": "trough",
+                        "location": "A1",
+                        "tip-offset": 0,
+                        "delay": 400,
+                        "tip-touch": false
+                      },
+                      "to": {
+                        "container": "pcr",
+                        "location": "A1",
+                        "touch-tip": true
+                      },
+                      "volume": 10,
+                      "blowout": true
+                    },
+                    {
+                      "from": {
+                        "container": "trough",
+                        "location": "A1",
+                        "tip-offset": 0,
+                        "delay": 400,
+                        "tip-touch": false
+                      },
+                      "to": {
+                        "container": "pcr",
+                        "location": "A1",
+                        "touch-tip": true
+                      },
+                      "volume": 10,
+                      "blowout": true
+                    },
+                    {
+                      "from": {
+                        "container": "trough",
+                        "location": "A1",
+                        "tip-offset": 0,
+                        "delay": 400,
+                        "tip-touch": false
+                      },
+                      "to": {
+                        "container": "pcr",
+                        "location": "A1",
+                        "touch-tip": true
+                      },
+                      "volume": 4,
+                      "blowout": true
+                    }
+                  ]
+                },
+
+                {
+                  "transfer": [
+                    {
+                      "from": {
+                        "container": "tubes",
+                        "location": "A1",
+                        "volume": 10,
+                        "touch-tip": false,
+                        "delay": 100,
+                        "tip-offset": 0
+                      },
+                      "to": {
+                        "container": "pcr",
+                        "location": "A1",
+                        "touch-tip": true,
+                        "delay": 100,
+                        "tip-offset": 0,
+                        "blowout": true
+                      }
+                    }
+                  ]
+                },
+                
+                {
+                    "consolidate":
+                    {
+                      "from": [
+                      {
+                        "container": "tubes",
+                        "location": "B1",
+                        "volume": 5,
+                        "touch-tip": false,
+                        "liquid-tracking": true,
+                        "tip-offset": -2
+                      },
+                      {
+                        "container": "tubes",
+                        "location": "C1",
+                        "volume": 1,
+                        "touch-tip": false,
+                        "liquid-tracking": true
+                      }
+                      ],
+                      "to": {
+                        "container": "pcr",
+                        "location": "A1",
+                        "touch-tip": true,
+                        "tip-offset": -2
+                      },
+                      "blowout": true
+                    }
+                },
+
+
+                {
+                  "mix": [
+                    {
+                      "container": "pcr",
+                      "location": "A1",
+                      "volume": 10,
+                      "repetitions": 5,
+                      "blowout": true,
+                      "liquid-tracking": false
+                    }
+                  ]
+                }
+
+            ]
+        }
+    ]
+}
